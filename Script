@@ -1,0 +1,11 @@
+n=input('Order of polynomials not exceeding 10');
+if n > 10
+    error('Order will show too many results')
+end
+for i=2:n+1
+    x = input('Enter a value for x');
+    y = input('Enter a value for y');
+    j=[ones(size(x))];
+    j(:,i)=x.^(i-1);
+end
+coef=j'*y
